@@ -18,6 +18,7 @@ import SearchScreen from "../screens/SearchScreen";
 import MyBooksScreen from "../screens/MyBooksScreen";
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
+import Splash from "../screens/Splash";
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
