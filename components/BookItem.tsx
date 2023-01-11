@@ -14,7 +14,7 @@ const BookItem = ({ book }: BookItemProps) => {
       <Image source={{ uri: book.image }} style={styles.image} />
       <View style={styles.contentContainer}>
         <Text style={styles.title}>{book.title}</Text>
-        <Text>by {book.authors?.join(", ")}</Text>
+        <Text style={styles.title}>by {book.authors?.join(", ")}</Text>
 
         <Pressable style={[styles.button, saved ? { backgroundColor: "lightgray" } : {}]} onPress={() => onToggleSaved(book)}>
           <Text style={styles.buttonText}>{saved ? "Remove" : "Want to Read"}</Text>
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 16,
     fontWeight: "500",
+    color: 'white',
   },
   button: {
     backgroundColor: '#46AA71',

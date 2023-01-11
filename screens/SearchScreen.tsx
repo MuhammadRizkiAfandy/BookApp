@@ -5,6 +5,7 @@ import { Text, View } from "../components/Themed";
 import { gql, useLazyQuery } from "@apollo/client";
 import BookItem from "../components/BookItem";
 import { SafeAreaView } from "react-native-safe-area-context";
+import Colors from "../constants/Colors";
 
 const query = gql`
   query SearchBooks($q: String) {
@@ -59,11 +60,12 @@ export default function SearchScreen() {
       };
     }
   };
+  
 
   return (
     <SafeAreaView edges={["top"]} style={styles.container}>
       <View style={styles.header}>
-        <TextInput value={search} onChangeText={setSearch} placeholder="Search..." style={styles.input} />
+        <TextInput value={search} onChangeText={setSearch} placeholder="Search..." placeholderTextColor={'white'} style={styles.input} />
         <Button title="Search" onPress={() => runQuery({ variables: { q: search } })} />
       </View>
 
@@ -83,7 +85,14 @@ export default function SearchScreen() {
           <Text>{error.message}</Text>
         </View>
       )}
-      <FlatList data={provider === "googleBooksSearch" ? data?.googleBooksSearch?.items : data?.openLibrarySearch?.docs || []} renderItem={({ item }) => <BookItem book={parseBook(item)} />} showsVerticalScrollIndicator={false} />
+
+      <View style={styles.header}>
+        <FlatList 
+        style={{backgroundColor: 'black'}}
+        data={provider === "googleBooksSearch" ? data?.googleBooksSearch?.items : data?.openLibrarySearch?.docs || []} 
+        renderItem={({ item }) =><BookItem book={parseBook(item)} />} 
+        showsVerticalScrollIndicator={false} />
+      </View>
     </SafeAreaView>
   );
 }
@@ -92,10 +101,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
+    backgroundColor:'#2B2B2D',
   },
   title: {
     fontSize: 20,
     fontWeight: "bold",
+    backgroundColor:'#2B2B2D',
   },
   separator: {
     marginVertical: 30,
@@ -105,6 +116,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: "row",
     alignItems: "center",
+    backgroundColor:'#2B2B2D',
   },
   input: {
     flex: 1,
@@ -113,11 +125,18 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 5,
     marginVertical: 5,
+    backgroundColor:'#2B2B2D',
+    color:'white',
   },
   tabs: {
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "center",
     height: 50,
+    backgroundColor:'#2B2B2D',
+  },
+  flat: {
+    backgroundColor: "black",
+    color: "white",
   },
 });
