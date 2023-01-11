@@ -1,10 +1,9 @@
 import React from "react";
 import { StyleSheet, View, Image } from "react-native";
-
 export default function Splash() {
     return (
         <View style={styles.container}>
-          <Image style={styles.readbook} source={require('./assets/readbook.png')} />
+          <Image style={styles.readbook} source={require('../assets/images/readbook.png')} />
         </View>
       );
 }
