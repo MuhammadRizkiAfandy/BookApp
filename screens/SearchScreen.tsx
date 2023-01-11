@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ActivityIndicator, StyleSheet, FlatList, TextInput, Button } from "react-native";
 
 import { Text, View } from "../components/Themed";
-import { gql, useQuery, useLazyQuery } from "@apollo/client";
+import { gql, useLazyQuery } from "@apollo/client";
 import BookItem from "../components/BookItem";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -92,7 +92,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 10,
-    backgroundColor: "white",
   },
   title: {
     fontSize: 20,
@@ -112,7 +111,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: "gainsboro",
     borderRadius: 5,
-    padding: 10,
+    padding: 5,
     marginVertical: 5,
   },
   tabs: {

@@ -1,7 +1,6 @@
 import { View, Text, StyleSheet, Image, Pressable } from "react-native";
 import React from "react";
 import { useMyBooks } from "../context/MyBooksProvider";
-import Colors from "../constants/Colors";
 
 type BookItemProps = {
   book: Book;
@@ -45,7 +44,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   button: {
-    backgroundColor: Colors.light.tint,
+    backgroundColor: '#46AA71',
     alignSelf: "flex-start",
     marginTop: "auto",
     marginVertical: 10,
