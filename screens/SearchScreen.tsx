@@ -88,7 +88,7 @@ export default function SearchScreen() {
 
       <View style={styles.header}>
         <FlatList 
-        style={{backgroundColor: 'black'}}
+        style={{backgroundColor: '#2B2B2D'}}
         data={provider === "googleBooksSearch" ? data?.googleBooksSearch?.items : data?.openLibrarySearch?.docs || []} 
         renderItem={({ item }) =><BookItem book={parseBook(item)} />} 
         showsVerticalScrollIndicator={false} />
