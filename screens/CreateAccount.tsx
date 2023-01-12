@@ -2,7 +2,7 @@ import { StyleSheet, View, Image,  } from "react-native";
 import React, { useState } from 'react';
 import { SafeAreaView, ScrollView, Text,TextInput, TouchableOpacity } from 'react-native';
 
-export default function Registrasi =() => {
+export default function Registrasi () {
   const [yourname, setName] = useState('');
   const [email,setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -31,7 +31,7 @@ export default function Registrasi =() => {
         </Text>
         <TextInput
           value={yourname}
-          keyboardType='name'
+          //keyboardType='name-address'
           onChangeText={text => setName(text)}
           style={{
             marginHorizontal: 20,
@@ -49,7 +49,7 @@ export default function Registrasi =() => {
         </Text>
         <TextInput
           value={email}
-          keyboardType='email'
+          keyboardType='email-address'
           onChangeText={text => setEmail(text)}
           style={{
             marginHorizontal: 20,
@@ -67,7 +67,7 @@ export default function Registrasi =() => {
         </Text>
         <TextInput
           value={password}
-          keyboardType='password'
+          keyboardType='email-address'
           onChangeText={text => setPassword(text)}
           style={{
             marginHorizontal: 20,
@@ -78,6 +78,7 @@ export default function Registrasi =() => {
             paddingLeft:10,
           }}
           placeholder="Masukkan Password Anda"
+          secureTextEntry={true}
         />
 
 
@@ -87,7 +88,7 @@ export default function Registrasi =() => {
         </Text>
         <TextInput
           value={repassword}
-          keyboardType='repassword'
+          keyboardType='email-address'
           onChangeText={text => setRepassword(text)}
           style={{
             marginHorizontal: 20,
@@ -98,6 +99,7 @@ export default function Registrasi =() => {
             paddingLeft:10,
           }}
           placeholder="Masukkan Re-Password Anda"
+          secureTextEntry={true}
         />
         
         <TouchableOpacity
@@ -121,8 +123,6 @@ export default function Registrasi =() => {
         <Text style={{color: 'white', fontSize: 15,marginHorizontal:30}}>
           <Text>Log In disini!</Text>
         </Text>
-
-        </ScrollView>
     </SafeAreaView>
   );
 };
@@ -149,5 +149,4 @@ const style = StyleSheet.create({
   underlineTextStyle: {
     textDecorationLine: 'underline',
   },
-})
-
+});
