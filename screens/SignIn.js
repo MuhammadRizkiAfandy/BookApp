@@ -1,23 +1,17 @@
 import { StyleSheet, View, Image,  } from "react-native";
 import { SafeAreaView, ScrollView, Text,TextInput, TouchableOpacity } from 'react-native';
-import Logo from 'asset/images/readbook.png':
-import React, { useEffect, useState } from 'react'
-import { KeyboardAvoidingView, StyleSheet, Text, TextInput, TouchableOpacity, View, Image } from 'react-native'
-import logo from './assets/Logo.png'
-
-const LoginScreen = () => {
+import React, {useState } from 'react'
+import { KeyboardAvoidingView} from 'react-native'
+const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
-
-
-
-
   return (
     <KeyboardAvoidingView
       style={styles.container}
-      behavior="padding"
-    >
-      <View style={styles.inputContainer}>
+      behavior="padding">
+      <SafeAreaView>
+      <ScrollView>
+      <View >
         <Image style={styles.readbook} source={require('../assets/images/readbook.png')} />
     
         <TextInput
@@ -38,11 +32,14 @@ const LoginScreen = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.button}
+          onPress={()=> navigation.navigate('Root')}
         >
           <Text style={styles.buttonText}>Login</Text>
         </TouchableOpacity>
        
       </View>
+      </ScrollView>
+      </SafeAreaView>
     </KeyboardAvoidingView>
   )
 }
@@ -54,19 +51,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  inputContainer: {
-    width: '80%'
+    backgroundColor:'#2B2B2D'
   },
   input: {
     backgroundColor: '#CFB4CD',
-    paddingHorizontal: 15,
+    paddingHorizontal: 6,
     paddingVertical: 10,
     borderRadius: 10,
     marginTop: 5,
   },
   buttonContainer: {
-    width: '60%',
+    width: '100%',
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: 40,
@@ -78,7 +73,6 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     alignItems: 'center',
   },
-
   buttonText: {
     color: 'white',
     fontWeight: '700',
@@ -87,6 +81,5 @@ const styles = StyleSheet.create({
   readbook: {
     width: 300, height: 300,
   },
-
 })
         

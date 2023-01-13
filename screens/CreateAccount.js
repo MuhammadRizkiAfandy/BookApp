@@ -67,7 +67,7 @@ export default function Registrasi ({navigation}) {
           secureTextEntry={true}
         />
         <TouchableOpacity style={{paddingTop:30}}>
-          <Button color='#75407D' title="Create Account" onPress={()=> navigation.navigate('Root')}/>
+          <Button color='#75407D' title="Create Account" onPress={()=> navigation.navigate('Login')}/>
         </TouchableOpacity>
         <Text style={{color: 'white', fontSize: 15,marginHorizontal:30, paddingTop:15}}>
           <Text>Already have an account?</Text>{'\n'}
