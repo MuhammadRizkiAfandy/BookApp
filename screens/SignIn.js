@@ -1,7 +1,5 @@
-import { StyleSheet, View, Image,  } from "react-native";
-import { SafeAreaView, ScrollView, Text,TextInput, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, Image, SafeAreaView, ScrollView, Text,TextInput, TouchableOpacity, KeyboardAvoidingView } from "react-native";
 import React, {useState } from 'react'
-import { KeyboardAvoidingView} from 'react-native'
 const LoginScreen = ({navigation}) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
