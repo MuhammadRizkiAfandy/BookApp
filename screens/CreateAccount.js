@@ -70,10 +70,10 @@ export default function Registrasi ({navigation}) {
           <Button color='#75407D' title="Create Account" onPress={()=> navigation.navigate('Login')}/>
         </TouchableOpacity>
         <Text style={{color: 'white', fontSize: 15,marginHorizontal:30, paddingTop:15}}>
-          <Text>Already have an account?</Text>{'\n'}
+          <Text onPress={()=> navigation.navigate('Login')}>Already have an account?</Text>{'\n'}
         </Text>
         <Text style={{color: 'white', fontSize: 15,marginHorizontal:30}}>
-          <Text>Log In disini!</Text>
+          <Text onPress={()=> navigation.navigate('Login')}>Log In disini!</Text>
         </Text>
     </ScrollView>
     </SafeAreaView>

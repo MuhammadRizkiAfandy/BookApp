@@ -22,6 +22,7 @@ import Splash from "../screens/Splash";
 import CreateAccount from "../screens/CreateAccount"
 import LoginScreen from "../screens/SignIn";
 
+
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
     <NavigationContainer linking={LinkingConfiguration} theme={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
