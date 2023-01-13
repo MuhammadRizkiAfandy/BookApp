@@ -6,6 +6,7 @@ import { gql, useLazyQuery } from "@apollo/client";
 import BookItem from "../components/BookItem";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Colors from "../constants/Colors";
+import React from "react";
 
 const query = gql`
   query SearchBooks($q: String) {

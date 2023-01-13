@@ -4,7 +4,7 @@ import { StyleSheet, View, Image } from "react-native";
 const Splash = ({navigation}) => {
   useEffect(()=>{
     setTimeout ( () => {
-      navigation.replace('Root');
+      navigation.replace('Register');
     },5000)
   },[navigation]);
   return (

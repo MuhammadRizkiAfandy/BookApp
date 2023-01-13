@@ -3,6 +3,7 @@ import { StyleSheet, TouchableOpacity } from 'react-native';
 
 import { MonoText } from './StyledText';
 import { Text, View } from './Themed';
+import React from 'react';
 
 export default function EditScreenInfo({ path }: { path: string }) {
   return (
